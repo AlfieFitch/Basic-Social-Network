@@ -19,6 +19,18 @@ public class Colleague {
         return tag;
     }
 
+    public int getJoinYear(){
+        return joinYear;
+    }
+
+    public int getJoinDay(){
+        return joinDay;
+    }
+
+    public int getJoinMonth(){
+        return joinMonth;
+    }
+
     public String getInterests(){
         return interests.toString();
     }

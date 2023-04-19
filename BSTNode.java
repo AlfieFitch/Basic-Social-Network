@@ -26,6 +26,4 @@ public class BSTNode {
     public void setR(BSTNode r) {
         this.r = r;
     }
-
-
 }
