@@ -8,15 +8,15 @@ public class BSTNode {
     }
 
     public BSTNode getL() {
-        return l;
+        return this.l;
     }
 
     public BSTNode getR() {
-        return r;
+        return this.r;
     }
 
     public Colleague getC(){
-        return c;
+        return this.c;
     }
 
     public void setL(BSTNode l) {

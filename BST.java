@@ -16,18 +16,29 @@ public class BST {
     }
 
     private void insert(BSTNode currentNode, BSTNode newNode) {
-        if (newNode.getC().getUserName().compareTo(currentNode.getC().getUserName()) < 0) {
+        
+        int compareValue = newNode.getC().getUserName().compareToIgnoreCase(currentNode.getC().getUserName());
+
+        if (compareValue < 0) {
             if (currentNode.getL() == null) {
                 currentNode.setL(newNode);
             } else {
                 insert(currentNode.getL(), newNode);
             }
-        } else {
+
+        } else if (compareValue > 0) {
             if (currentNode.getR() == null) {
                 currentNode.setR(newNode);
             } else {
                 insert(currentNode.getR(), newNode);
             }
+
+        } else {
+            if (currentNode.getL() == null) {
+                currentNode.setL(newNode);
+            } else {
+                insert(currentNode.getL(), newNode);
+            } 
         }
     }
 }
